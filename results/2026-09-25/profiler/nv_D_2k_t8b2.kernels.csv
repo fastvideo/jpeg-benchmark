@@ -1,0 +1,3 @@
+kernel,launches,seconds,share_pct
+"dctQuantInvJpegKernelMultiChannel",23172,0.458065,73.99
+"ycbcr_to_format_kernel_roi",23172,0.160985,26.01

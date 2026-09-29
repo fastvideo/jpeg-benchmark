@@ -1,0 +1,3 @@
+kernel,launches,seconds,share_pct
+"batchedDctQuantInvJpegKernel",119,0.275563,59.93
+"batchedYCbCr2RGB_kernelv2",119,0.184247,40.07

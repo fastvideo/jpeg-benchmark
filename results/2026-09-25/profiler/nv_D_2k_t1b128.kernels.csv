@@ -1,0 +1,5 @@
+kernel,launches,seconds,share_pct
+"decodeDcHuffman",117,15.315188,95.39
+"jpegdec_vld",117,0.421403,2.62
+"batchedYCbCr2RGB_kernelv2",117,0.212269,1.32
+"parseBatched_k",117,0.106420,0.66

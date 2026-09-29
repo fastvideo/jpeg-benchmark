@@ -1,0 +1,124 @@
+jpeg-big-06 of 28.09.2026
+results folder: D:\_Test\jpeg\big-out\20260929-103559
+
+========================================================================
+STEP 1. Is the 8K frame of the article 2 x 2 copies of the 4K frame?
+   file on disk: D:\_Test\fvSDK-0.23.1.0-Win64-CUDA-13.3-Trial-Exp-2027-08-03\bin\x64\Release\8k_wild.ppm
+      made from the 4K frame: 7680 x 4320, pixel MD5 3b43fd5c72238c26f60b6f6c72d022a4
+      the file on disk:       7680 x 4320, pixel MD5 3b43fd5c72238c26f60b6f6c72d022a4
+   THE SAME - the 8K frame is 2 x 2 copies of the 4K frame
+
+========================================================================
+STEP 2. MCU and restart interval of the Fastvideo encoder, 4K frame, q = 90
+   asked 444 -> file 444, factors 1x1 1x1 1x1, MCU 8 x 8 px, 3 data units, restart interval 10 MCU  [as in the article]
+   asked 422 -> file 422, factors 2x1 1x1 1x1, MCU 16 x 8 px, 4 data units, restart interval 8 MCU  [as in the article]
+   asked 420 -> file 420, factors 2x2 1x1 1x1, MCU 16 x 16 px, 6 data units, restart interval 5 MCU  [as in the article]
+   all three as in the article
+
+========================================================================
+STEP 3. 12K and 16K, one thread, q = 90, 444 and 420
+
+12k: 11520 x 6480, 74.6 MPix, copies of the 4K frame -> D:\_Test\jpeg\big-img\12k_wild.ppm
+
+16k: 15360 x 8640, 132.7 MPix, copies of the 4K frame -> D:\_Test\jpeg\big-img\16k_wild.ppm
+
+Points: 8 (one thread, no copies), each at 444 and 420, alternating; 48 to 160 measurements of about 8 s - from 9 to 29 minutes, plus making the files.
+Results go to D:\_Test\jpeg\big-out\<date>-<time>
+
+Is the card free? Watching it for 30 s (nothing of ours running)...
+   free: 29 checks, at most 6 % and 56 W
+
+========================================================================
+RESULTS GO TO:
+   D:\_Test\jpeg\big-out\20260929-103559
+========================================================================
+   12k: already there, 223948818 bytes
+   16k: already there, 398131218 bytes
+   fv 12k 444 -> 11520 x 6480, 444, 18604561 bytes, interval 10, 116640 entropy-coded segments
+   fv 12k 420 -> 11520 x 6480, 420, 14141848 bytes, interval 5, 58320 entropy-coded segments
+   nv 12k 444 -> 11520 x 6480, 444, 18004933 bytes, interval 0, 1 entropy-coded segments
+   nv 12k 420 -> 11520 x 6480, 420, 13847568 bytes, interval 0, 1 entropy-coded segments
+   fv 16k 444 -> 15360 x 8640, 444, 33074205 bytes, interval 10, 207360 entropy-coded segments
+   fv 16k 420 -> 15360 x 8640, 420, 25140493 bytes, interval 5, 103680 entropy-coded segments
+   nv 16k 444 -> 15360 x 8640, 444, 32008164 bytes, interval 0, 1 entropy-coded segments
+   nv 16k 420 -> 15360 x 8640, 420, 24617624 bytes, interval 0, 1 entropy-coded segments
+
+The card is sampled once a second (NVML).
+
+[1/8] 12k_fv_E
+   444: 335.0 fps, scatter 0.3 % over 3 clean repeats of 3
+   420: 457.0 fps, scatter 0.2 % over 3 clean repeats of 3
+
+[2/8] 12k_fv_D
+   444: 221.0 fps, scatter 0.5 % over 3 clean repeats of 3
+   420: 295.0 fps, scatter 1.0 % over 3 clean repeats of 3
+
+[3/8] 12k_nv_E
+   444: 247.5 fps, scatter 0.0 % over 3 clean repeats of 3
+   420: 360.1 fps, scatter 0.1 % over 3 clean repeats of 3
+
+[4/8] 12k_nv_D
+   444: 6.0 fps, scatter 1.3 % over 3 clean repeats of 3
+   420: 10.0 fps, scatter 0.4 % over 3 clean repeats of 3
+
+[5/8] 16k_fv_E
+   444: 191.0 fps, scatter 0.0 % over 3 clean repeats of 3
+   420: 261.0 fps, scatter 3.1 % over 3 clean repeats of 3
+
+[6/8] 16k_fv_D
+   444: 118.0 fps, scatter 0.0 % over 3 clean repeats of 3
+   420: 165.0 fps, scatter 0.0 % over 3 clean repeats of 3
+
+[7/8] 16k_nv_E
+   444: 136.6 fps, scatter 0.0 % over 3 clean repeats of 3
+   420: 204.3 fps, scatter 0.1 % over 3 clean repeats of 3
+
+[8/8] 16k_nv_D
+   444: 3 clean of 3, scatter 7 % - one more round (4 of 10)
+   444: 4 clean of 4, scatter 7 % - one more round (5 of 10)
+   444: 5 clean of 5, scatter 7 % - one more round (6 of 10)
+   444: 6 clean of 6, scatter 8 % - one more round (7 of 10)
+   444: 7 clean of 7, scatter 8 % - one more round (8 of 10)
+   444: 8 clean of 8, scatter 8 % - one more round (9 of 10)
+   444: 9 clean of 9, scatter 8 % - one more round (10 of 10)
+   444: 3.4 fps, scatter 7.6 % over 10 clean repeats of 10
+   420: 5.7 fps, scatter 1.4 % over 10 clean repeats of 10
+
+Quality 90.
+                   sub        fps       ms  ms/MPix      GB/s  spread
+12k         fv  E  444      335.0    2.985   0.0400      75.0    0.3%
+12k         fv  E  420      457.0    2.188   0.0293     102.3    0.2%
+12k         fv  D  444      221.0    4.525   0.0606      49.5    0.5%
+12k         fv  D  420      295.0    3.390   0.0454      66.1    1.0%
+12k         nv  E  444      247.5    4.040   0.0541      55.4    0.0%
+12k         nv  E  420      360.1    2.777   0.0372      80.6    0.1%
+12k         nv  D  444        6.0  165.289   2.2142       1.4    1.3%
+12k         nv  D  420       10.0  100.000   1.3396       2.2    0.4%
+16k         fv  E  444      191.0    5.236   0.0395      76.0    0.0%
+16k         fv  E  420      261.0    3.831   0.0289     103.9    3.1%
+16k         fv  D  444      118.0    8.475   0.0639      47.0    0.0%
+16k         fv  D  420      165.0    6.061   0.0457      65.7    0.0%
+16k         nv  E  444      136.6    7.322   0.0552      54.4    0.0%
+16k         nv  E  420      204.3    4.894   0.0369      81.4    0.1%
+16k         nv  D  444        3.4  291.545   2.1969       1.4    7.6%  scatter too wide
+16k         nv  D  420        5.7  176.367   1.3290       2.3    1.4%
+
+For comparison, 8K 4:4:4, quality 90, one thread in the bench run (ms per megapixel):
+   8k   fv  D  444     517.0 fps   0.0583 ms/MPix
+   8k   fv  E  444     715.0 fps   0.0422 ms/MPix
+   8k   nv  D  444      14.8 fps   2.0297 ms/MPix
+   8k   nv  E  444     538.7 fps   0.0559 ms/MPix
+
+If the time per megapixel stays about the same from 8K to the bigger frames, the card is already full on 8K and the time grows with the number of pixels.
+
+RESULTS ARE IN:
+   D:\_Test\jpeg\big-out\20260929-103559
+   79 files, 0.1 MB, text only
+   checks.txt  steps 1 and 2: the 8K frame, MCU of the encoder
+   sizes.csv   bytes, MCUs, restart interval, entropy-coded segments
+   repeats.csv every repeat: speed, card power, clean or disturbed
+   card.csv    the card once a second during step 3
+   console.txt everything printed here
+   speeds.csv  the table above
+   *.log       what the programs printed, every repeat
+ZIP THAT FOLDER WHOLE AND SEND IT. The big frames stay in D:\_Test\jpeg\big-img.

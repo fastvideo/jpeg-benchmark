@@ -1,0 +1,12 @@
+jpeg-big-06 of 28.09.2026
+
+Step 1. 8K frame
+   file on disk: D:\_Test\fvSDK-0.23.1.0-Win64-CUDA-13.3-Trial-Exp-2027-08-03\bin\x64\Release\8k_wild.ppm
+      made from the 4K frame: 7680 x 4320, pixel MD5 3b43fd5c72238c26f60b6f6c72d022a4
+      the file on disk:       7680 x 4320, pixel MD5 3b43fd5c72238c26f60b6f6c72d022a4
+   THE SAME - the 8K frame is 2 x 2 copies of the 4K frame
+
+Step 2. MCU of the Fastvideo encoder, 4K frame, q = 90
+   asked 444 -> file 444, factors 1x1 1x1 1x1, MCU 8x8, units 3, interval 10, 2067825 bytes: as in the article
+   asked 422 -> file 422, factors 2x1 1x1 1x1, MCU 16x8, units 4, interval 8, 1751599 bytes: as in the article
+   asked 420 -> file 420, factors 2x2 1x1 1x1, MCU 16x16, units 6, interval 5, 1571968 bytes: as in the article

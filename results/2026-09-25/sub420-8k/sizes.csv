@@ -1,0 +1,5 @@
+image,codec,subsampling,bytes,mcus,restart_interval,independent_pieces
+8k,fv,420,6285673,129600,5,25920
+8k,fv,444,8269101,518400,10,51840
+8k,nv,420,6154908,129600,0,1
+8k,nv,444,8002529,518400,0,1

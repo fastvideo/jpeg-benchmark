@@ -1,0 +1,9 @@
+6 of 6 points done
+last change: 25.09.2026 14:19:27
+
+   fv_E_2k_t32b1            coverage 17.1 %, starvation 7 %, AKC 0.20, yes
+   fv_D_2k_t32b1            coverage 59.1 %, starvation 7 %, AKC 1.04, yes
+   nv_E_2k_t8b2             coverage 22.8 %, starvation 25 %, AKC 0.29, NOT (26.9 %)
+   nv_D_2k_t8b2             coverage 3.1 %, starvation 2 %, AKC 0.03, yes
+   nv_D_2k_t1b32            coverage 2.0 %, starvation 76 %, AKC 0.02, yes
+   nv_D_2k_t1b128           coverage 78.9 %, starvation 1 %, AKC 0.79, yes

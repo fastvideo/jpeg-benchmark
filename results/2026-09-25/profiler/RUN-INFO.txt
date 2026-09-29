@@ -1,0 +1,34 @@
+nsys-jpeg-20 of 25.09.2026
+started:      25.09.2026 13:42:42
+project:      D:\_Test\jpeg
+bench run:    D:\_Test\jpeg\runs\jpeg_20260925_130207
+nsys:         C:\Program Files\NVIDIA Corporation\Nsight Systems 2026.4.1\target-windows-x64\nsys.exe
+quality:      90       frames: 2k
+card counters: asked for (they need an administrator terminal)
+
+6 points, each one run twice - control, then under nsys:
+   fv_E_2k_t32b1            D:\_Test\fvSDK-0.23.1.0-Win64-CUDA-13.3-Trial-Exp-2027-08-03\bin\x64\Release\JpegSample.exe -i D:\_Test\fvSDK-0.23.1.0-Win64-CUDA-13.3-Trial-Exp-2027-08-03\bin\x64\Release\2k_wild.ppm -o tmp.jpg -q 90 -s 444 -repeat 9462 -async -thread 32 -b 1 -threadR 2 -threadW 1 -discard
+   fv_D_2k_t32b1            D:\_Test\fvSDK-0.23.1.0-Win64-CUDA-13.3-Trial-Exp-2027-08-03\bin\x64\Release\JpegSample.exe -i fv_ref_2k_q90_444.jpg -o tmp.ppm -repeat 43584 -async -thread 32 -b 1 -threadR 2 -threadW 1 -discard
+   nv_E_2k_t8b2             D:\_Test\jpeg\nvjpeg_bench\nvjpegEncoderSample.exe -i D:\_Test\fvSDK-0.23.1.0-Win64-CUDA-13.3-Trial-Exp-2027-08-03\bin\x64\Release\2k_wild.ppm -o tmp.jpg -q 90 -s 444 -repeat 9419 -async -thread 8 -b 2 -window host2host -discard
+   nv_D_2k_t8b2             D:\_Test\jpeg\nvjpeg_bench\nvjpegDecoderSample.exe -i nv_ref_2k_q90_444.jpg -o tmp.ppm -repeat 3756 -async -thread 8 -b 2 -window host2host -backend gpuhybrid -discard
+   nv_D_2k_t1b32            D:\_Test\jpeg\nvjpeg_bench\nvjpegDecoderSample.exe -i nv_ref_2k_q90_444.jpg -o tmp.ppm -repeat 3756 -batched -b 32 -window host2host -backend gpuhybrid -discard
+   nv_D_2k_t1b128           D:\_Test\jpeg\nvjpeg_bench\nvjpegDecoderSample.exe -i nv_ref_2k_q90_444.jpg -o tmp.ppm -repeat 3756 -batched -b 128 -window host2host -backend gpuhybrid -discard
+
+What will appear in this folder, per point:
+   <point>.control.log      what the program printed without nsys
+   <point>.run.log          and under it
+   <point>.kernels.csv      kernels by name, time and share
+   <point>.copies.csv       memory copies by kind
+   <point>.metrics.json     everything counted for that point
+   <point>.gpu-metrics.csv  the card's own counters, if nsys took them
+and once, at the end:
+   coverage.csv             every point in one table
+
+Only small files are written here. The traces themselves (.nsys-rep
+and .sqlite, hundreds of megabytes) go to a folder of their own:
+   D:\_Test\jpeg\nsys-traces\20260925-134242_jpeg_20260925_130207
+so this folder can be zipped whole and sent without sorting.
+
+PROGRESS.txt beside this file is rewritten after every point.
+If this folder holds only this file, the first control run has not
+finished yet - give it a minute.

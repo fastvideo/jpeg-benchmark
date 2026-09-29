@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use these scripts or data, please cite them as below."
+title: "JPEG on the GPU: Fastvideo JPEG vs NVIDIA nvJPEG on RTX 4090"
+type: software
+authors:
+  - family-names: Serzhenko
+    given-names: Fyodor
+    affiliation: Fastvideo
+version: "2026.09"
+date-released: "2026-09-29"
+repository-code: "https://github.com/fastvideo/jpeg-benchmark"
+url: "https://www.fastvideo.ru/blog/fastvideo-jpeg-vs-nvjpeg.htm"
+keywords:
+  - JPEG
+  - nvJPEG
+  - GPU
+  - CUDA
+  - restart markers
+  - benchmark
+  - RTX 4090

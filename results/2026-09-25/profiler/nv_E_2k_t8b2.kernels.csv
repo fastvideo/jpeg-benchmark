@@ -1,0 +1,11 @@
+kernel,launches,seconds,share_pct
+"ACKernel",211887,3.246669,37.20
+"format_to_ycbcr_kernel",70629,1.341969,15.37
+"forwardDct32x8Kernel",211887,1.103159,12.64
+"DCKernel",211887,0.898959,10.30
+"BlockAssembleKernel",70629,0.745883,8.55
+"ByteStuffingKernel",70629,0.406462,4.66
+"UpdateBlocksKernel",141258,0.303955,3.48
+"SumBlocksKernel",141258,0.267971,3.07
+"OutputOffsetKernel",70629,0.229521,2.63
+"BlockLengthKernel",70629,0.183764,2.11

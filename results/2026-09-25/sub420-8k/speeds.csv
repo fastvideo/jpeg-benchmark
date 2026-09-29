@@ -1,0 +1,5 @@
+point,image,codec,direction,how,fps_444,spread_444_pct,repeats_444,fps_420,spread_420_pct,repeats_420,change_pct,trustworthy,bench_fps_444,this_vs_bench_pct
+8k_fv_E_single,8k,fv,E,single,716.00,24.86,7,963.00,37.28,7,,no,715.00,0.14
+8k_fv_D_single,8k,fv,D,single,527.00,0.19,3,660.00,0.30,3,25.24,yes,517.00,1.93
+8k_nv_E_single,8k,nv,E,single,540.90,0.41,3,749.17,0.34,3,38.50,yes,538.72,0.40
+8k_nv_D_single,8k,nv,D,single,13.68,12.06,7,22.35,2.73,7,,no,14.85,-7.88

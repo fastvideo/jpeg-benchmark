@@ -1,0 +1,13 @@
+kernel,launches,seconds,share_pct
+"HuffmanDecodeKernel",74030,22.872548,71.28
+"RleDecodeKernel",74030,3.844740,11.98
+"InverseDCTColorKernel",74030,1.650128,5.14
+"BlockScanKernel_v2",370150,0.560832,1.75
+"TopScanKernel_v2",370150,0.519313,1.62
+"BytestreamUnstuffRestKernel",74030,0.479544,1.49
+"BytestreamMarkupMarkerAndFFRestKernel",74030,0.472951,1.47
+"UpdateScanKernel_v2",370150,0.452821,1.41
+"BytestreamUnstuffKernel",74030,0.391958,1.22
+"DCRestoreKernel",222090,0.372482,1.16
+"DCSumKernel",222090,0.282856,0.88
+"BytestreamMarkupMarkerAndFFKernel",74030,0.187327,0.58

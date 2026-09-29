@@ -1,0 +1,10 @@
+image,variant,bytes,restart_interval,independent_pieces,vs_as_is_pct
+2k,as-is,698189,10,3240,0.00
+2k,no-markers,683674,0,1,-2.08
+2k,every-mcu,828884,1,32400,18.72
+4k,as-is,2067825,10,12960,0.00
+4k,no-markers,2009741,0,1,-2.81
+4k,every-mcu,2593344,1,129600,25.41
+8k,as-is,8269101,10,51840,0.00
+8k,no-markers,8037054,0,1,-2.81
+8k,every-mcu,10371489,1,518400,25.42

@@ -1,0 +1,9 @@
+kernel,launches,seconds,share_pct
+"RleBalancedKernel",70108,1.259334,30.01
+"DCT444Kernel",70108,0.778310,18.54
+"HuffmanAndStuffingKernel",70108,0.707825,16.87
+"applyImageProcessingColor_8",70108,0.705222,16.80
+"ConcatBytestreamKernel",70108,0.443150,10.56
+"ApplySumKernel",70108,0.133466,3.18
+"Scan64Kernel",70108,0.086223,2.05
+"SumUpdatesKernel",70108,0.083374,1.99
