@@ -1,1 +1,47 @@
+# Run folders: every script makes its own and they can be large.
+# A finished run goes into results/<date>/ by hand, with its logs zipped.
+runs/
+all-out/
+nsys-out/
+nsys-traces/
+sub420-out/
+sub420-img/
+markers-out/
+markers-img/
+build-logs/
+*-old-*/
+
+# Working files left in the project folder
+tmp.ppm
+tmp.jpg
+*_ref_*.jpg
+spread-check-*.csv
+*.nsys-rep
+*.sqlite
+
+# Reference frames ship with the Fastvideo SDK
+*.ppm
+
+# Build output
+*.exe
+*.obj
+*.pdb
+*.lib
+*.exp
+build/
+x64/
+
+# Python
+__pycache__/
+*.pyc
+
+# Editors and systems
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Notes for the owner, not for the repository
+FILES-ru.md
 
