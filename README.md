@@ -1,5 +1,12 @@
 # JPEG on the GPU: Fastvideo JPEG vs NVIDIA nvJPEG on RTX 4090
 
+![JPEG encoding and decoding: Fastvideo JPEG and NVIDIA nvJPEG on an RTX 4090](results/2026-09-25/summary-rtx-4090.webp)
+
+*Encoding and decoding of JPEG on an RTX 4090: quality 90, 4:4:4, one thread, no transfers between
+host memory and the GPU. The Fastvideo encoder is 30–39 % faster; the Fastvideo decoder is 9.7 to
+35 times faster on these frames and up to 37 times on 12K and 16K (table below). Every number in
+this picture comes from the logs in `results/` and is reproduced by the scripts in `bench/`.*
+
 A reproducible benchmark of two baseline JPEG codecs on one NVIDIA GeForce RTX 4090:
 the Fastvideo JPEG codec from the Fastvideo SDK and the nvJPEG library from the CUDA
 Toolkit. Same frames, same quantization tables, same card, same day. The test scripts,
@@ -101,6 +108,7 @@ bench/                            the test scripts, as they ran on 25.09.2026 (j
   get-nvidia-jpeg-sample-01.py    fetches NVIDIA's own JPEG sample programs
   nvjpeg_bench/nvjpeg_bench-01.cpp  our nvJPEG measurement program
 results/2026-09-25/
+  summary-rtx-4090.webp           the picture at the top of this page
   bench/                          summary.txt, results.csv / .json / .jsonl, spread.csv,
                                   logs.zip - every launch of the main run, 356 logs
   markers/                        speeds and file sizes with and without markers
