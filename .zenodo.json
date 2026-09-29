@@ -1,1 +1,34 @@
+{
+  "upload_type": "software",
+  "title": "jpeg-benchmark: a reproducible comparison of GPU JPEG codecs (Fastvideo JPEG and NVIDIA nvJPEG on an RTX 4090)",
+  "version": "2026.09",
+  "description": "<p>Scripts, a measurement program for NVIDIA nvJPEG and raw logs for comparing two baseline JPEG codecs on one NVIDIA GeForce RTX 4090: the Fastvideo JPEG codec from Fastvideo SDK and the nvJPEG library from the CUDA Toolkit, at quality 90 with the same quantization tables, on 2K, 4K, 8K, 12K and 16K frames.</p><p>The procedure measures one thread without transfers and the best multithreaded mode with transfers to the card and back, the same image with and without restart markers, 4:2:0 against 4:4:4, the split of nvJPEG decoding time between CPU and GPU, the nvJPEG batch mode, a Nsight Systems profile and GPU energy per frame.</p><p>Results of the runs of 25 and 29 September 2026: Fastvideo JPEG encodes 30 to 39 % faster (715 frames per second on 8K, 963 with 4:2:0) and decodes 9.7 to 37 times faster than nvJPEG in one thread, on frames from 2K to 16K; the difference comes from restart markers, which the Fastvideo encoder writes and nvJPEG does not.</p><p>Licences: source code under MIT; measurement results, tables, logs and README under CC BY 4.0 (see CONTENT-LICENSE.md). Third-party software is not included.</p><p>Affiliation: the author works at Fastvideo, the developer of Fastvideo JPEG.</p>",
+  "creators": [
+    {
+      "name": "Serzhenko, Fyodor",
+      "affiliation": "Fastvideo"
+    }
+  ],
+  "license": "mit",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "JPEG",
+    "GPU",
+    "CUDA",
+    "nvJPEG",
+    "restart markers",
+    "benchmark",
+    "reproducibility",
+    "RTX 4090",
+    "energy per frame",
+    "Huffman decoding"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://www.fastvideo.ru/blog/fastvideo-jpeg-vs-nvjpeg.htm",
+      "relation": "isSupplementTo"
+    }
+  ]
+}
 
