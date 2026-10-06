@@ -1,0 +1,210 @@
+jpeg-aerial-07 of 05.10.2026
+results folder: D:\_Test\jpeg\aerial-out\20261005-111244
+
+========================================================================
+STEP 2. The Fastvideo decoder decodes each frame once; the Fastvideo encoder compresses it at q = 95 at 4:4:4, 4:2:2 and 4:2:0
+
+02.jpg
+   decoded picture is already there: D:\_Test\jpeg\aerial-img\02\decoded.ppm
+   fv-444    44.7 MB (-0.0 % to the camera's file), 444, interval 10, 102200 entropy-coded segments (already there, reused)
+   fv-422    39.3 MB (-12.0 % to the camera's file), 422, interval 8, 63875 entropy-coded segments (already there, reused)
+   fv-420    36.3 MB (-18.9 % to the camera's file), 420, interval 5, 51159 entropy-coded segments (already there, reused)
+   PSNR of fv-444 against the camera's picture: 62.51 dB
+
+06.jpg
+   decoded picture is already there: D:\_Test\jpeg\aerial-img\06\decoded.ppm
+   fv-444    55.8 MB (+1.0 % to the camera's file), 444, interval 10, 162035 entropy-coded segments (already there, reused)
+   fv-422    49.1 MB (-11.1 % to the camera's file), 422, interval 8, 101344 entropy-coded segments (already there, reused)
+   fv-420    44.7 MB (-19.0 % to the camera's file), 420, interval 5, 81075 entropy-coded segments (already there, reused)
+   PSNR of fv-444 against the camera's picture: 69.69 dB
+
+03.jpg
+   decoded picture is already there: D:\_Test\jpeg\aerial-img\03\decoded.ppm
+   fv-444    72.4 MB (-8.9 % to the camera's file), 444, interval 10, 201407 entropy-coded segments (already there, reused)
+   fv-422    64.7 MB (-18.5 % to the camera's file), 422, interval 8, 125879 entropy-coded segments (already there, reused)
+   fv-420    61.4 MB (-22.7 % to the camera's file), 420, interval 5, 100704 entropy-coded segments (already there, reused)
+   PSNR of fv-444 against the camera's picture: 44.20 dB
+
+04.jpg
+   decoded once by the Fastvideo decoder in 1.5 s into D:\_Test\jpeg\aerial-img\04\decoded.ppm
+   fv-444     0.0 MB (-100.0 % to the camera's file), 444, interval 10, 235942 entropy-coded segments (already there, reused)
+   fv-422     0.0 MB (-100.0 % to the camera's file), 422, interval 8, 147464 entropy-coded segments (already there, reused)
+   fv-420     0.0 MB (-100.0 % to the camera's file), 420, interval 5, 117971 entropy-coded segments (already there, reused)
+
+========================================================================
+STEP 3. One thread, without copies to the card and back
+The card is sampled once a second (NVML).
+
+02, decoder fv
+   02_fv_D_as-is: trial 119.60 fps, 956 frames a repeat
+   02_fv_D_fv-444: trial 119.97 fps, 959 frames a repeat
+   02_fv_D_fv-422: trial 131.57 fps, 1052 frames a repeat
+   02_fv_D_fv-420: trial 171.16 fps, 1369 frames a repeat
+   as-is             120.62 fps    7.89 GPix/s  scatter 0.4 %
+   fv-444            120.68 fps    7.89 GPix/s  scatter 0.4 %
+   fv-422            132.56 fps    8.67 GPix/s  scatter 0.6 %
+   fv-420            172.77 fps   11.30 GPix/s  scatter 0.6 %
+
+02, decoder nv
+   02_nv_D_as-is: trial 3.47 fps, 27 frames a repeat
+   02_nv_D_fv-444: trial 3.49 fps, 27 frames a repeat
+   02_nv_D_fv-422: trial 4.12 fps, 32 frames a repeat
+   02_nv_D_fv-420: trial 4.55 fps, 36 frames a repeat
+   as-is               3.35 fps    0.22 GPix/s  scatter 1.5 %
+   fv-444              3.32 fps    0.22 GPix/s  scatter 2.1 %
+   fv-422              3.95 fps    0.26 GPix/s  scatter 2.1 %
+   fv-420              4.41 fps    0.29 GPix/s  scatter 2.5 %
+
+02, encoding q = 95, 444
+   02_fv_E: trial 234.39 fps, 1875 frames a repeat
+   02_nv_E: trial 164.50 fps, 1315 frames a repeat
+   fv    235.00 fps   15.37 GPix/s
+   nv    164.50 fps   10.76 GPix/s
+
+06, decoder fv
+   06_fv_D_as-is: trial 1.57 fps, 12 frames a repeat
+   06_fv_D_fv-444: trial 98.40 fps, 787 frames a repeat
+   06_fv_D_fv-422: trial 107.40 fps, 859 frames a repeat
+   06_fv_D_fv-420: trial 139.20 fps, 1113 frames a repeat
+   as-is               1.53 fps    0.16 GPix/s  scatter 1.1 %
+   fv-444             99.04 fps   10.27 GPix/s  scatter 1.0 %
+   fv-422            108.05 fps   11.20 GPix/s  scatter 1.9 %
+   fv-420            140.37 fps   14.56 GPix/s  scatter 0.1 %
+
+06, decoder nv
+   06_nv_D_as-is: trial 2.58 fps, 20 frames a repeat
+   06_nv_D_fv-444: trial 2.53 fps, 20 frames a repeat
+   06_nv_D_fv-422: trial 2.98 fps, 23 frames a repeat
+   06_nv_D_fv-420: trial 3.34 fps, 26 frames a repeat
+   as-is               2.45 fps    0.25 GPix/s  scatter 6.0 %
+   fv-444              2.39 fps    0.25 GPix/s  scatter 1.6 %
+   fv-422              2.83 fps    0.29 GPix/s  scatter 1.2 %
+   fv-420              3.19 fps    0.33 GPix/s  scatter 1.4 %
+
+06, encoding q = 95, 444
+   06_fv_E: trial 176.09 fps, 1408 frames a repeat
+   06_nv_E: trial 122.24 fps, 977 frames a repeat
+   fv    176.10 fps   18.26 GPix/s
+   nv    122.01 fps   12.65 GPix/s
+
+03, decoder fv
+   03_fv_D_as-is: trial 1.08 fps, 8 frames a repeat
+   03_fv_D_fv-444: trial 71.59 fps, 572 frames a repeat
+   03_fv_D_fv-422: trial 78.67 fps, 629 frames a repeat
+   03_fv_D_fv-420: trial 102.77 fps, 822 frames a repeat
+   as-is               1.07 fps    0.14 GPix/s  scatter 2.4 %
+   fv-444             72.30 fps    9.31 GPix/s  scatter 1.0 %
+   fv-422             79.33 fps   10.22 GPix/s  scatter 0.2 %
+   fv-420            103.52 fps   13.33 GPix/s  scatter 0.1 %
+
+03, decoder nv
+   03_nv_D_as-is: trial 2.01 fps, 16 frames a repeat
+   03_nv_D_fv-444: trial 1.95 fps, 15 frames a repeat
+   03_nv_D_fv-422: trial 2.32 fps, 18 frames a repeat
+   03_nv_D_fv-420: trial 2.52 fps, 20 frames a repeat
+   as-is               1.94 fps    0.25 GPix/s  scatter 3.0 %
+   fv-444              1.88 fps    0.24 GPix/s  scatter 3.8 %
+   fv-422              2.16 fps    0.28 GPix/s  scatter 4.3 %
+   fv-420              2.43 fps    0.31 GPix/s  scatter 2.5 %
+
+03, encoding q = 95, 444
+   03_fv_E: trial 136.90 fps, 1095 frames a repeat
+   03_nv_E: trial 93.82 fps, 750 frames a repeat
+   fv    136.97 fps   17.64 GPix/s
+   nv     93.85 fps   12.09 GPix/s
+
+04, decoder fv
+   04_fv_D_as-is: trial 1.24 fps, 9 frames a repeat
+   04_fv_D_fv-444: FAILED in the trial run: no figure printed
+      Decoding error
+   04_fv_D_fv-422: FAILED in the trial run: no figure printed
+      Decoding error
+   04_fv_D_fv-420: FAILED in the trial run: no figure printed
+      Decoding error
+   as-is               1.23 fps    0.19 GPix/s  scatter 0.9 %
+
+04, decoder nv
+   04_nv_D_as-is: trial 2.18 fps, 17 frames a repeat
+   04_nv_D_fv-444: FAILED in the trial run: no figure printed
+      ERROR: nvjpegDecode(handle, s.state, &bitstream[0], bitstream.size(), NVJPEG_OUTPUT_RGB, &s.img, s.stream) failed with code 3 at d:\_Test\jpeg\nvjpeg_bench\nvjpeg_bench-01.cpp:1095
+      SDK version: nvJPEG-13.2.1.68
+      Processing unit: NVIDIA GeForce RTX 4090 (device id = 0)
+      Available GPU memory size: 22.50 GB
+      PCI-Express bandwidth test (host to device): 25487 MByte/s
+      Input image : D:\_Test\jpeg\aerial-img\04\fv-444.jpg (14192x10640 pixels; 3 channel(s); 444)
+   04_nv_D_fv-422: FAILED in the trial run: no figure printed
+      ERROR: nvjpegDecode(handle, s.state, &bitstream[0], bitstream.size(), NVJPEG_OUTPUT_RGB, &s.img, s.stream) failed with code 3 at d:\_Test\jpeg\nvjpeg_bench\nvjpeg_bench-01.cpp:1095
+      SDK version: nvJPEG-13.2.1.68
+      Processing unit: NVIDIA GeForce RTX 4090 (device id = 0)
+      Available GPU memory size: 22.50 GB
+      PCI-Express bandwidth test (host to device): 25477 MByte/s
+      Input image : D:\_Test\jpeg\aerial-img\04\fv-422.jpg (14192x10640 pixels; 3 channel(s); 422)
+   04_nv_D_fv-420: FAILED in the trial run: no figure printed
+      ERROR: nvjpegDecode(handle, s.state, &bitstream[0], bitstream.size(), NVJPEG_OUTPUT_RGB, &s.img, s.stream) failed with code 3 at d:\_Test\jpeg\nvjpeg_bench\nvjpeg_bench-01.cpp:1095
+      SDK version: nvJPEG-13.2.1.68
+      Processing unit: NVIDIA GeForce RTX 4090 (device id = 0)
+      Available GPU memory size: 22.50 GB
+      PCI-Express bandwidth test (host to device): 25476 MByte/s
+      Input image : D:\_Test\jpeg\aerial-img\04\fv-420.jpg (14192x10640 pixels; 3 channel(s); 420)
+   as-is               2.17 fps    0.33 GPix/s  scatter 5.3 %
+
+04, encoding q = 95, 444
+   04_fv_E: trial 135.38 fps, 1083 frames a repeat
+   04_nv_E: trial 94.01 fps, 752 frames a repeat
+   fv    135.36 fps   20.44 GPix/s
+   nv     93.59 fps   14.13 GPix/s
+
+========================================================================
+STEP 4. With copies to the card and back (multithreaded mode)
+
+02_fv_Dcopy: how much memory do 8 threads ask for?
+   8 threads: requested 15.5 GB, available 11.6 GB
+   too much - 5 threads
+   5 threads: requested 9.7 GB, available 17.1 GB
+
+02_fv_Dcopy_t5
+   02_fv_Dcopy_t5: trial 65.29 fps, 522 frames a repeat
+       72.44 fps    4.74 GPix/s
+
+02_nv_Dcopy: how much memory do 8 threads ask for?
+   8 threads: requested 1.5 GB, available 22.5 GB
+
+02_nv_Dcopy_t8
+   02_nv_Dcopy_t8: trial 20.95 fps, 167 frames a repeat
+       25.03 fps    1.64 GPix/s
+
+06_fv_Dcopy: how much memory do 8 threads ask for?
+   8 threads: requested 24.5 GB, available 17.1 GB
+   too much - 4 threads
+   4 threads: requested 12.3 GB, available 23.1 GB
+
+06_fv_Dcopy_t4
+   06_fv_Dcopy_t4: trial 41.93 fps, 335 frames a repeat
+       50.88 fps    5.28 GPix/s
+
+06_nv_Dcopy: how much memory do 8 threads ask for?
+   8 threads: requested 2.3 GB, available 22.5 GB
+
+06_nv_Dcopy_t8
+   06_nv_Dcopy_t8: trial 14.94 fps, 119 frames a repeat
+       17.50 fps    1.81 GPix/s
+
+03_fv_Dcopy: how much memory do 8 threads ask for?
+   8 threads: requested 30.5 GB, available 23.1 GB
+   too much - 5 threads
+   5 threads: requested 19.1 GB, available 23.1 GB
+
+03_fv_Dcopy_t5
+   03_fv_Dcopy_t5: trial 28.09 fps, 224 frames a repeat
+       38.21 fps    4.92 GPix/s
+
+03_nv_Dcopy: how much memory do 8 threads ask for?
+   8 threads: requested 2.9 GB, available 22.5 GB
+
+03_nv_Dcopy_t8
+   03_nv_Dcopy_t8: trial 10.69 fps, 85 frames a repeat
+       13.29 fps    1.71 GPix/s
+
+04_fv_Dcopy: how much memory do 8 threads ask for?
+
+Stopped. Whatever finished is already written to disk.

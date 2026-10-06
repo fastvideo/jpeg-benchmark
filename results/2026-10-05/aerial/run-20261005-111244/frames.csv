@@ -1,0 +1,5 @@
+file,width,height,mpix,kind,bits,subsampling,bytes,bytes_per_pixel,restart_interval,segments,make,model,software
+02.jpg,9344,7000,65.41,baseline,8,444,44720042,0.6837,10,102200,,,
+06.jpg,11272,9200,103.70,baseline,8,444,55252584,0.5328,0,1,,,
+03.jpg,13468,9564,128.81,baseline,8,444,79458136,0.6169,0,1,Phase One,P5-GS128,Capture One Windows
+04.jpg,14192,10640,151.00,baseline,8,444,64566314,0.4276,0,1,,,

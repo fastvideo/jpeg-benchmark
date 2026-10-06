@@ -1,0 +1,2 @@
+D:\_Test\libjpeg-turbo-gcc64\bin\tjbench.exe
+libjpeg-turbo version 3.2.0 (build 20260630)

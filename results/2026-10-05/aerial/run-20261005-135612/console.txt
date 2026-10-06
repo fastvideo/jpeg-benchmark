@@ -1,0 +1,280 @@
+jpeg-aerial-08 of 05.10.2026
+results folder: D:\_Test\jpeg\aerial-out\20261005-135612
+
+========================================================================
+STEP 2. The Fastvideo decoder decodes each frame once; the Fastvideo encoder compresses it at q = 95 at 4:4:4, 4:2:2 and 4:2:0
+
+02.jpg
+   decoded picture is already there: D:\_Test\jpeg\aerial-img\02\decoded.ppm
+   fv-444    44.7 MB (-0.0 % to the camera's file), 444, interval 10, 102200 entropy-coded segments (already there, reused)
+   fv-422    39.3 MB (-12.0 % to the camera's file), 422, interval 8, 63875 entropy-coded segments (already there, reused)
+   fv-420    36.3 MB (-18.9 % to the camera's file), 420, interval 5, 51159 entropy-coded segments (already there, reused)
+
+06.jpg
+   decoded picture is already there: D:\_Test\jpeg\aerial-img\06\decoded.ppm
+   fv-444    55.8 MB (+1.0 % to the camera's file), 444, interval 10, 162035 entropy-coded segments (already there, reused)
+   fv-422    49.1 MB (-11.1 % to the camera's file), 422, interval 8, 101344 entropy-coded segments (already there, reused)
+   fv-420    44.7 MB (-19.0 % to the camera's file), 420, interval 5, 81075 entropy-coded segments (already there, reused)
+
+03.jpg
+   decoded picture is already there: D:\_Test\jpeg\aerial-img\03\decoded.ppm
+   fv-444    72.4 MB (-8.9 % to the camera's file), 444, interval 10, 201407 entropy-coded segments (already there, reused)
+   fv-422    64.7 MB (-18.5 % to the camera's file), 422, interval 8, 125879 entropy-coded segments (already there, reused)
+   fv-420    61.4 MB (-22.7 % to the camera's file), 420, interval 5, 100704 entropy-coded segments (already there, reused)
+
+04.jpg
+   decoded once by the Fastvideo decoder in 1.5 s into D:\_Test\jpeg\aerial-img\04\decoded.ppm
+   fv-444    65.5 MB (+1.4 % to the camera's file), 444, interval 10, 235942 entropy-coded segments
+   fv-422    56.7 MB (-12.2 % to the camera's file), 422, interval 8, 147464 entropy-coded segments
+   fv-420    51.6 MB (-20.1 % to the camera's file), 420, interval 5, 117971 entropy-coded segments
+   PSNR of fv-444 against the camera's picture: 69.72 dB
+
+========================================================================
+STEP 3. One thread, without copies to the card and back
+The card is sampled once a second (NVML).
+
+02: step 3 not in this edition (measured in 20261005-111244)
+
+06: step 3 not in this edition (measured in 20261005-111244)
+
+03: step 3 not in this edition (measured in 20261005-111244)
+
+04, decoder fv
+   04_fv_D_as-is: trial 1.20 fps, 9 frames a repeat
+   04_fv_D_fv-444: trial 83.42 fps, 667 frames a repeat
+   04_fv_D_fv-422: trial 90.53 fps, 724 frames a repeat
+   04_fv_D_fv-420: trial 117.36 fps, 938 frames a repeat
+   round 1 done, 13:57:54
+   round 2 done, 13:59:13
+   round 3 done, 14:00:32
+   as-is               1.22 fps    0.18 GPix/s  scatter 2.8 %
+   fv-444             84.17 fps   12.71 GPix/s  scatter 0.1 %
+   fv-422             91.29 fps   13.78 GPix/s  scatter 0.1 %
+   fv-420            118.77 fps   17.93 GPix/s  scatter 3.0 %
+
+04, decoder nv
+   04_nv_D_as-is: trial 2.18 fps, 17 frames a repeat
+   04_nv_D_fv-444: trial 2.14 fps, 17 frames a repeat
+   04_nv_D_fv-422: trial 2.60 fps, 20 frames a repeat
+   04_nv_D_fv-420: trial 2.93 fps, 23 frames a repeat
+   round 1 done, 14:01:18
+   round 2 done, 14:01:53
+   round 3 done, 14:02:29
+   not settled yet: 04_nv_D_as-is - one more round (4 of 10)
+   round 4 done, 14:03:03
+   not settled yet: 04_nv_D_as-is - one more round (5 of 10)
+   round 5 done, 14:03:38
+   not settled yet: 04_nv_D_as-is - one more round (6 of 10)
+   round 6 done, 14:04:13
+   not settled yet: 04_nv_D_as-is, 04_nv_D_fv-444 - one more round (7 of 10)
+   round 7 done, 14:04:49
+   not settled yet: 04_nv_D_as-is, 04_nv_D_fv-444 - one more round (8 of 10)
+   round 8 done, 14:05:24
+   not settled yet: 04_nv_D_as-is, 04_nv_D_fv-444 - one more round (9 of 10)
+   round 9 done, 14:05:59
+   not settled yet: 04_nv_D_as-is, 04_nv_D_fv-444 - one more round (10 of 10)
+   round 10 done, 14:06:34
+   as-is               2.16 fps    0.33 GPix/s  scatter 7.5 %
+   fv-444              2.11 fps    0.32 GPix/s  scatter 7.0 %
+   fv-422              2.50 fps    0.38 GPix/s  scatter 7.1 %
+   fv-420              2.81 fps    0.43 GPix/s  scatter 4.2 %
+
+04, encoding q = 95, 444
+   04_fv_E: trial 135.48 fps, 1083 frames a repeat
+   04_nv_E: trial 94.10 fps, 752 frames a repeat
+   round 1 done, 14:07:21
+   round 2 done, 14:07:57
+   round 3 done, 14:08:33
+   fv    135.33 fps   20.44 GPix/s
+   nv     94.11 fps   14.21 GPix/s
+
+========================================================================
+STEP 4. With copies to the card and back (multithreaded mode)
+
+02_fv_Dcopy: how much memory do 8 threads ask for?
+   8 threads: requested 15.5 GB, available 22.9 GB
+
+02_fv_Dcopy_t8
+   02_fv_Dcopy_t8: trial 58.82 fps, 470 frames a repeat
+   round 1 done, 14:08:45
+   round 2 done, 14:08:53
+   round 3 done, 14:09:00
+       71.48 fps    4.68 GPix/s
+
+02_nv_Dcopy: how much memory do 8 threads ask for?
+   8 threads: requested 1.5 GB, available 22.5 GB
+
+02_nv_Dcopy_t8
+   02_nv_Dcopy_t8: trial 20.97 fps, 167 frames a repeat
+   round 1 done, 14:09:22
+   round 2 done, 14:09:32
+   round 3 done, 14:09:41
+       24.54 fps    1.61 GPix/s
+
+06_fv_Dcopy: how much memory do 8 threads ask for?
+   8 threads: requested 24.5 GB, available 22.9 GB
+   too much - 6 threads
+   6 threads: requested 18.4 GB, available 22.9 GB
+
+06_fv_Dcopy_t6
+   06_fv_Dcopy_t6: trial 38.14 fps, 305 frames a repeat
+   round 1 done, 14:10:01
+   round 2 done, 14:10:08
+   round 3 done, 14:10:15
+       51.36 fps    5.33 GPix/s
+
+06_nv_Dcopy: how much memory do 8 threads ask for?
+   8 threads: requested 2.3 GB, available 22.5 GB
+
+06_nv_Dcopy_t8
+   06_nv_Dcopy_t8: trial 14.97 fps, 119 frames a repeat
+   round 1 done, 14:10:42
+   round 2 done, 14:10:53
+   round 3 done, 14:11:04
+       17.33 fps    1.80 GPix/s
+
+03_fv_Dcopy: how much memory do 8 threads ask for?
+   8 threads: requested 30.5 GB, available 22.9 GB
+   too much - 5 threads
+   5 threads: requested 19.1 GB, available 22.9 GB
+
+03_fv_Dcopy_t5
+   03_fv_Dcopy_t5: trial 27.88 fps, 223 frames a repeat
+   round 1 done, 14:11:36
+   round 2 done, 14:11:43
+   round 3 done, 14:11:50
+       37.91 fps    4.88 GPix/s
+
+03_nv_Dcopy: how much memory do 8 threads ask for?
+   8 threads: requested 2.9 GB, available 22.5 GB
+
+03_nv_Dcopy_t8
+   03_nv_Dcopy_t8: trial 10.48 fps, 83 frames a repeat
+   round 1 done, 14:12:22
+   round 2 done, 14:12:33
+   round 3 done, 14:12:45
+       13.10 fps    1.69 GPix/s
+
+04_fv_Dcopy: how much memory do 8 threads ask for?
+   8 threads: requested 35.7 GB, available 22.9 GB
+   too much - 4 threads
+   4 threads: requested 17.9 GB, available 22.9 GB
+
+04_fv_Dcopy_t4
+   04_fv_Dcopy_t4: trial 27.44 fps, 219 frames a repeat
+   round 1 done, 14:13:19
+   round 2 done, 14:13:26
+   round 3 done, 14:13:33
+       37.32 fps    5.64 GPix/s
+
+04_nv_Dcopy: how much memory do 8 threads ask for?
+   8 threads: requested 3.4 GB, available 22.5 GB
+
+04_nv_Dcopy_t8
+   04_nv_Dcopy_t8: trial 10.60 fps, 84 frames a repeat
+   round 1 done, 14:14:04
+   round 2 done, 14:14:15
+   round 3 done, 14:14:27
+       13.26 fps    2.00 GPix/s
+
+========================================================================
+STEP 4a. One thread with both copies: the file and the decoded picture in the computer's memory
+
+02, decoder fv, one thread with copies
+   02_fv_Dcopy1_fv-444: trial 63.07 fps, 504 frames a repeat
+   round 1 done, 14:14:38
+   round 2 done, 14:14:46
+   round 3 done, 14:14:54
+   fv-444      63.36 fps    4.14 GPix/s     15.8 ms a frame
+
+02, decoder nv, one thread with copies
+   02_nv_Dcopy1_fv-444: trial 3.39 fps, 27 frames a repeat
+   round 1 done, 14:15:07
+   round 2 done, 14:15:16
+   round 3 done, 14:15:25
+   fv-444       3.17 fps    0.21 GPix/s    315.3 ms a frame
+
+06, decoder fv, one thread with copies
+   06_fv_Dcopy1_fv-444: trial 43.72 fps, 349 frames a repeat
+   round 1 done, 14:15:36
+   round 2 done, 14:15:44
+   round 3 done, 14:15:53
+   fv-444      45.32 fps    4.70 GPix/s     22.1 ms a frame
+
+06, decoder nv, one thread with copies
+   06_nv_Dcopy1_fv-444: trial 2.44 fps, 19 frames a repeat
+   round 1 done, 14:16:03
+   round 2 done, 14:16:11
+   round 3 done, 14:16:20
+   fv-444       2.42 fps    0.25 GPix/s    413.7 ms a frame
+
+03, decoder fv, one thread with copies
+   03_fv_Dcopy1_fv-444: trial 34.20 fps, 273 frames a repeat
+   round 1 done, 14:16:31
+   round 2 done, 14:16:40
+   round 3 done, 14:16:49
+   fv-444      34.85 fps    4.49 GPix/s     28.7 ms a frame
+
+03, decoder nv, one thread with copies
+   03_nv_Dcopy1_fv-444: trial 1.89 fps, 15 frames a repeat
+   round 1 done, 14:17:00
+   round 2 done, 14:17:09
+   round 3 done, 14:17:17
+   fv-444       1.83 fps    0.24 GPix/s    546.4 ms a frame
+
+04, decoder fv, one thread with copies
+   04_fv_Dcopy1_fv-444: trial 33.43 fps, 267 frames a repeat
+   round 1 done, 14:17:30
+   round 2 done, 14:17:38
+   round 3 done, 14:17:47
+   fv-444      34.20 fps    5.16 GPix/s     29.2 ms a frame
+
+04, decoder nv, one thread with copies
+   04_nv_Dcopy1_fv-444: trial 2.06 fps, 16 frames a repeat
+   round 1 done, 14:17:58
+   round 2 done, 14:18:06
+   round 3 done, 14:18:15
+   fv-444       2.01 fps    0.30 GPix/s    496.6 ms a frame
+
+========================================================================
+STEP 5. The CPU: libjpeg-turbo, 1 / 8 / 16 processes at once, on the original file and on the file with markers
+   libjpeg-turbo: libjpeg-turbo version 3.2.0 (build 20260630)
+   load and clock of the CPU once a second: psutil
+   02 as-is   1 at once:    3.031 fps in all,  0.198 GPix/s,   329.9 ms a frame on average; output BGR
+   02 as-is   8 at once:   23.246 fps in all,  1.521 GPix/s,    43.0 ms a frame on average; output BGR
+   02 as-is  16 at once:   44.172 fps in all,  2.889 GPix/s,    22.6 ms a frame on average; output BGR
+   02 fv-444  1 at once:    3.029 fps in all,  0.198 GPix/s,   330.1 ms a frame on average; output BGR
+   02 fv-444  8 at once:   23.296 fps in all,  1.524 GPix/s,    42.9 ms a frame on average; output BGR
+   02 fv-444 16 at once:   43.704 fps in all,  2.859 GPix/s,    22.9 ms a frame on average; output BGR
+   06 as-is   1 at once:    2.514 fps in all,  0.261 GPix/s,   397.8 ms a frame on average; output BGR
+   06 as-is   8 at once:   19.066 fps in all,  1.977 GPix/s,    52.5 ms a frame on average; output BGR
+   06 as-is  16 at once:   35.882 fps in all,  3.721 GPix/s,    27.9 ms a frame on average; output BGR
+   06 fv-444  1 at once:    2.330 fps in all,  0.242 GPix/s,   429.1 ms a frame on average; output BGR
+   06 fv-444  8 at once:   17.844 fps in all,  1.850 GPix/s,    56.0 ms a frame on average; output BGR
+   06 fv-444 16 at once:   33.562 fps in all,  3.480 GPix/s,    29.8 ms a frame on average; output BGR
+   03 as-is   1 at once:    1.794 fps in all,  0.231 GPix/s,   557.6 ms a frame on average; output BGR
+   03 as-is   8 at once:   13.755 fps in all,  1.772 GPix/s,    72.7 ms a frame on average; output BGR
+   03 as-is  16 at once:   25.773 fps in all,  3.320 GPix/s,    38.8 ms a frame on average; output BGR
+   03 fv-444  1 at once:    1.794 fps in all,  0.231 GPix/s,   557.3 ms a frame on average; output BGR
+   03 fv-444  8 at once:   13.676 fps in all,  1.762 GPix/s,    73.1 ms a frame on average; output BGR
+   03 fv-444 16 at once:   25.758 fps in all,  3.318 GPix/s,    38.8 ms a frame on average; output BGR
+   04 as-is   1 at once:    1.986 fps in all,  0.300 GPix/s,   503.5 ms a frame on average; output BGR
+   04 as-is   8 at once:   15.178 fps in all,  2.292 GPix/s,    65.9 ms a frame on average; output BGR
+   04 as-is  16 at once:   27.517 fps in all,  4.155 GPix/s,    36.3 ms a frame on average; output BGR
+   04 fv-444  1 at once:    1.846 fps in all,  0.279 GPix/s,   541.8 ms a frame on average; output BGR
+   04 fv-444  8 at once:   14.162 fps in all,  2.139 GPix/s,    70.6 ms a frame on average; output BGR
+   04 fv-444 16 at once:   26.559 fps in all,  4.010 GPix/s,    37.7 ms a frame on average; output BGR
+
+RESULTS ARE IN:
+   D:\_Test\jpeg\aerial-out\20261005-135612
+   380 files, 0.3 MB, text only
+   frames.csv   the frames: size, sampling, markers, camera
+   variants.csv the camera's file and the encoder's files: bytes, interval, segments
+   psnr.csv     PSNR of the re-encoded picture against the camera's
+   speeds.csv   one thread, without copies; GPix/s
+   copies.csv   with copies, multithreaded
+   copies1.csv  with copies, one thread
+   cpu.csv      libjpeg-turbo, 1 / 8 / 16 processes, original file and file with markers; cpu-load.csv  the CPU once a second
+   repeats.csv  every repeat; card.csv  the card once a second
+ZIP THAT FOLDER WHOLE AND SEND IT. Nothing from this window needs copying: console.txt in it holds all that was printed.
+The decoded pictures and the encoder's files stay in D:\_Test\jpeg\aerial-img.
